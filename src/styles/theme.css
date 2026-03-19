@@ -1,0 +1,219 @@
+:root {
+    --background: #000000;
+    --foreground: #eeeeee;
+
+}
+
+@theme {
+    --font-pixel: "Silkscreen", sans-serif;
+    --font-hero: "Meta", sans-serif;
+}
+
+@theme inline {
+    --color-background: var(--background);
+}
+
+@layer components {
+    /* Theme for all pages */
+    .page {
+        @apply font-pixel max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    h1 {
+        @apply flex justify-center text-7xl mb-6 text-shadow-[2px_2px_0px_#e94560];
+    }
+
+    h2 {
+        @apply text-5xl mb-6 uppercase tracking-wide;
+    }
+
+    h3 {
+        @apply text-3xl mb-6 uppercase tracking-wide;
+    }
+
+    p {
+        @apply text-base leading-loose opacity-60 whitespace-pre-line max-w-prose;
+    }
+
+    .gliding-text {
+        @apply transition-all duration-500 ease-out hover:translate-x-15
+    }
+
+    /* Dark pages */
+    .dark {
+        @apply bg-black text-white;
+    }
+
+    /* Light pages */
+    .light {
+        @apply bg-white text-black;
+    }
+
+    /* Theme for navigation */
+    .nav {
+        @apply font-pixel flex justify-between items-center h-16;
+    }
+    .nav .title {
+        @apply text-xl text-[#e94560] hover:text-white transition-colors;
+    }
+
+    .nav .item {
+        @apply text-base text-gray-300 hover:text-[#e94560] transition-colors uppercase;
+    }   
+
+    /* Theme for hero section */
+    .hero h1 {
+        transition: all 0.5s;
+        font-variation-settings: "wght" 900, "ital" 1;
+        font-family: "Silkscreen";
+        font-size: 6rem;
+        text-align: center;
+        color: white;
+        text-shadow: 10px 10px 0px #5a5a5a,
+            45px 45px 10px #272727;
+        cursor: pointer;
+    }
+
+    .hero h1:hover {
+        font-variation-settings: "wght" 100, "ital" 0;
+        text-shadow: none;
+    }
+
+    /* Theme for about section */
+    .about .arrow-button {
+        @apply text-white hover:text-[#e94560] transition-colors disabled:opacity-30;
+    }
+
+    .about .card {
+        @apply w-full h-[70vh] flex flex-col rounded-2xl p-10 backdrop-blur-xl bg-black/10 border-2 border-white shadow-white shadow-[20px_20px_0px]}
+
+    .about .card:hover {
+        @apply border-[#e94560] shadow-[#e94560] shadow-[30px_30px_0px];
+    }
+
+    /* Theme for projects section */
+    .projects {
+        
+    }
+
+    /* Theme for skills section */
+    .skill {
+        @apply px-3 py-1 text-sm bg-white text-black transition w-[150px] rounded-lg;
+    }
+
+    .skill:hover {
+        @apply bg-black text-white shadow-[#e94560] shadow-[5px_5px_0px];
+    }
+
+    /* Theme for books section */
+    .books {
+        
+    }
+
+    /* Theme for contact section */
+    .contact {
+        
+    }
+}
+
+
+@layer utilities {
+    .bg-pixel-space {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .dark .bg-pixel-space {
+        box-shadow: white;
+    }
+
+    .light .bg-pixel-space {
+        box-shadow: black;
+    }
+
+    /* DOTS */
+    .bg-pixel-space::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        width: 2px;
+        height: 2px;
+
+        box-shadow:
+            120px 80px,
+            300px 200px,
+            500px 150px,
+            700px 300px,
+            900px 100px,
+            1100px 250px,
+            200px 400px,
+            120px 180px,
+            100px 200px,
+            1800px 150px,
+            700px 1000px,
+            950px 200px,
+            1000px 310px,
+            1500px 300px;
+
+            animation: pixelDrift 120s linear infinite;
+    }
+
+    /* HORIZONTAL LINES */
+    .bg-pixel-space::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        width: 10px;
+        height: 2px;
+
+        transform: translate(-50%, -50%);
+
+        box-shadow:
+            200px 150px,
+            600px 250px,
+            1000px 300px,
+            400px 500px,
+            800px 650px,
+            100px 100px,
+            200px 300px,
+            400px 150px,
+            600px 250px;
+
+            animation: pixelDrift 60s linear infinite;
+    }
+
+    /* VERTICAL LINES */
+    .cross-layer {
+        position: absolute;
+        inset: 0;
+
+        width: 2px;
+        height: 10px;
+
+        transform: translate(-50%, -50%);
+
+        box-shadow:
+            200px 150px,
+            600px 250px,
+            1000px 300px,
+            400px 500px,
+            800px 650px,
+            100px 100px,
+            200px 300px,
+            400px 150px,
+            600px 250px;
+
+            animation: pixelDrift 60s linear infinite;
+    }
+
+    @keyframes pixelDrift {
+        from {
+            transform: translate(-50%, -50%) translateY(0);
+        }
+        to {
+            transform: translate(-50%, -50%) translateY(-500px);
+        }
+    }
+}

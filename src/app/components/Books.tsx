@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { BOOKS } from "@/styles/books.ts";
+import { BOOKS } from "../../styles/books";
+import type { Key } from "react";
 
 export function Books() {
   return (
@@ -21,7 +22,7 @@ export function Books() {
             <h1 className="break-all w-min text-right">Books</h1>
           </div>
           <ul className="cards">
-            {BOOKS.map((book, i) => (
+            {BOOKS.map((book: { img: string | undefined; title: string | undefined; }, i: Key | null | undefined) => (
               <li key={i}>
                 <div className="card-inner">
                   <img src={book.img} alt={book.title} />

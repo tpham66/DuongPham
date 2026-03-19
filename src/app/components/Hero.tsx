@@ -4,7 +4,7 @@ import { ChevronsDown } from "lucide-react";
 export function Hero() {
     return (
         <div className="hero page dark">
-        `    <motion.section
+            <motion.section
                 id="hero"
                 className="py-20 bg-pixel-space min-h-screen"
                 initial={{ opacity: 0, y: 80 }}
@@ -70,7 +70,7 @@ export function Hero() {
                     </div>
                 </div>
                 
-            </motion.section>`
+            </motion.section>
         </div>
     )
 }

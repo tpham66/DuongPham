@@ -1,23 +1,36 @@
 import { motion } from "framer-motion";
+import { BOOKS } from "@/styles/books.ts";
 
 export function Books() {
-    return (
-        <motion.section
-            id="books"
-            className="py-20 bg-gray-100"
-            initial={{ opacity: 0, y: 80 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{once: true}}
-        >
-                <div className="page">
-                    <h2 className="text-4xl mb-6 text-gray-900">
-                        My Books
-                    </h2>
-                    <div className="space-y-12">
-                        {/* Contact form will go here */}
-                    </div>
+  return (
+    <div className="books page dark">
+      <motion.section
+        id="books"
+        className="py-20 bg-pixel-space"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{once: false, amount: 0.4}}
+        transition={{
+          duration: 0.5,
+          velocity: 100,
+        }}
+      >
+        <div className="cross-layer"></div>
+        <div className="grid md:grid-cols-[1fr_3fr] gap-12 items-center min-h-screen">
+          <div className="flex justify-center items-center">
+            <h1 className="break-all w-min text-right">Books</h1>
+          </div>
+          <ul className="cards">
+            {BOOKS.map((book, i) => (
+              <li key={i}>
+                <div className="card-inner">
+                  <img src={book.img} alt={book.title} />
                 </div>
-        </motion.section>
-    )
+              </li>
+            ))}
+          </ul>
+        </div>
+      </motion.section>
+    </div>
+  )
 }

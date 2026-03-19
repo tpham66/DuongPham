@@ -31,8 +31,8 @@ export function Navigation() {
             <button onClick={() => scrollToSection('skills')} className="item">
               [SKILLS]
             </button>
-            <button onClick={() => scrollToSection('projects')} className="item">
-              [PROJECTS]
+            <button onClick={() => scrollToSection('experience')} className="item">
+              [EXPERIENCE]
             </button>
             <button onClick={() => scrollToSection('books')} className="item">
               [BOOKS]

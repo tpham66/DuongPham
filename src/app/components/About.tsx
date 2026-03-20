@@ -97,7 +97,7 @@ export function About() {
         <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-center">
 
           {/* Left Column - Info Cards */}
-          <div className="flex gap-6 items-center w-full min-h-screen">
+          <div className="flex gap-6 items-center w-full min-h-dvh">
 
             {/* LEFT ARROW */}
             <button

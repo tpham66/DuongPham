@@ -15,11 +15,11 @@ export function Skills() {
                 }}
             >
                 <div className="cross-layer"></div>
-                <div className="grid md:grid-cols-[2fr_3fr] gap-12 items-center min-h-screen">
+                <div className="grid md:grid-cols-[2fr_3fr] gap-12 items-center min-h-dvh">
                     <h1 className="justify-start">
                         Skills
                     </h1>
-                    <div className="space-y-8 flex flex-row gap-1">
+                    <div className="space-y-8 flex flex-row gap-10">
 
                         {/* Languages */}
                         <div className="flex flex-col items-start gap-4 w-fit">

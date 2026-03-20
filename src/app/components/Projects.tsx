@@ -58,7 +58,7 @@ export function Projects() {
                 }}
             >
                 <div className="cross-layer"></div>
-                <div className="grid md:grid-rows-[1fr_4fr] items-center min-h-screen">
+                <div className="grid md:grid-rows-[1fr_4fr] items-center min-h-dvh">
                     <div className="items-center">
                         <h1 className="justify-start">
                             Projects

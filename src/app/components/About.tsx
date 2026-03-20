@@ -84,7 +84,7 @@ export function About() {
     <div className="about page dark">
       <motion.section
         id="about"
-        className="bg-pixel-space"
+        className="py-20 bg-pixel-space"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
@@ -199,7 +199,7 @@ export function About() {
               <a href="https://www.linkedin.com/in/thuy-duong-pham-/" target="_blank" rel="noopener noreferrer" className=" hover:text-[#e94560] transition-colors border-2 border-white p-3 hover:border-[#e94560]">
                 <Linkedin size={20} />
               </a>
-              <a href="phamduong2604@gmail.com" className="hover:text-[#e94560] transition-colors border-2 border-white p-3 hover:border-[#e94560]">
+              <a href="mailto:phamduong2604@gmail.com" className="hover:text-[#e94560] transition-colors border-2 border-white p-3 hover:border-[#e94560]">
                 <Mail size={20} />
               </a>
             </motion.div>

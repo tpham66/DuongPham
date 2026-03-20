@@ -5,7 +5,7 @@ export function Skills() {
         <div className="skills page light">
             <motion.section
                 id="skills"
-                className="py-20 light bg-pixel-space"
+                className="py-20 px-10 light bg-pixel-space"
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{once: false, amount: 0.4}}
@@ -16,7 +16,7 @@ export function Skills() {
             >
                 <div className="cross-layer"></div>
                 <div className="grid md:grid-cols-[2fr_3fr] gap-12 items-center min-h-screen">
-                    <h1>
+                    <h1 className="justify-start">
                         Skills
                     </h1>
                     <div className="space-y-8 flex flex-row gap-1">

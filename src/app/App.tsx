@@ -4,7 +4,7 @@ import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Books } from './components/Books';
-import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 import { Navigation } from './components/Navigation';
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
       <Experience />
       <Projects />
       <Books />
-      <Contact />
+      <Footer />
     </div>
   );
 }

@@ -7,20 +7,17 @@ export function Books() {
     <div className="books page dark">
       <motion.section
         id="books"
-        className="py-20 bg-pixel-space"
+        className="py-20 px-10 bg-pixel-space"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{once: false, amount: 0.4}}
+        viewport={{once: false, amount: 0.2}}
         transition={{
           duration: 0.5,
           velocity: 100,
         }}
       >
         <div className="cross-layer"></div>
-        <div className="grid md:grid-cols-[1fr_3fr] gap-12 items-center min-h-screen">
-          <div className="flex justify-center items-center">
-            <h1 className="break-all w-min text-right">Books</h1>
-          </div>
+        <div className="grid md:grid-cols-[3fr_1fr] gap-12 items-center min-h-screen">
           <ul className="cards">
             {BOOKS.map((book: { img: string | undefined; title: string | undefined; }, i: Key | null | undefined) => (
               <li key={i}>
@@ -30,6 +27,7 @@ export function Books() {
               </li>
             ))}
           </ul>
+          <h1>Books</h1>
         </div>
       </motion.section>
     </div>

@@ -56,9 +56,13 @@
         @apply text-xl text-[#e94560] hover:text-white transition-colors;
     }
 
-    .nav .item {
-        @apply text-base text-gray-300 hover:text-[#e94560] transition-colors uppercase;
+    .nav .item{
+        @apply text-base text-gray-400 hover:text-[#e94560] transition-colors uppercase;
     }   
+
+    .mobile-item {
+        @apply font-pixel text-base text-gray-400 hover:text-[#e94560] transition-colors uppercase text-left;
+    }
 
     /* Theme for hero section */
     .hero h1 {
@@ -149,6 +153,14 @@
         transform: translateY(0) rotateX(0);
     }
 
+    .proj-card {
+        @apply items-center justify-center;
+    }
+
+    .card_content {
+        @apply flex flex-col gap-10 items-center py-5 px-10 
+    }
+
     /* Theme for skills section */
     .skill {
         @apply px-3 py-1 text-sm bg-white text-black transition w-[150px] rounded-lg;
@@ -224,7 +236,7 @@
 @layer utilities {
     .bg-pixel-space {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .dark .bg-pixel-space {

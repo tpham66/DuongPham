@@ -6,10 +6,10 @@ export function Hero() {
         <div className="hero page dark">
             <motion.section
                 id="hero"
-                className="py-20 bg-pixel-space min-h-screen"
+                className="py-20 px-10 bg-pixel-space min-h-screen"
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{once: false, amount: 0.4}}
+                viewport={{once: false, amount: 0.1}}
                 transition={{
                     duration: 0.5,
                     velocity: 100,
@@ -56,7 +56,7 @@ export function Hero() {
 
                             requestAnimationFrame(scrollAnimation);
                         }}
-                        className="absolute bottom-6 left-1/4 -translate-x-1/2 translate-y-5 flex flex-col items-center gap-3 text-white/60 cursor-pointer"
+                        className="absolute bottom-6 left-1/4 -translate-x-1/2 translate-y-5 flex flex-col items-center gap-3 text-white/60 cursor-pointer hover:text-[#e94560]"
                     >
                         <span className="text-sm tracking-[0.2em] mb-2">SCROLL DOWN FOR MORE</span>
 
@@ -65,7 +65,7 @@ export function Hero() {
                             transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
                             className="scale-x-150"
                         >
-                            <ChevronsDown size={40} strokeWidth={2} />
+                            <ChevronsDown size={40} strokeWidth={2} className="hover:text-[#e94560]"/>
                         </motion.div>
                     </div>
                 </div>

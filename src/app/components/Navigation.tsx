@@ -13,7 +13,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-gray-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="nav">
           <button 
@@ -34,11 +34,11 @@ export function Navigation() {
             <button onClick={() => scrollToSection('experience')} className="item">
               [EXPERIENCE]
             </button>
+            <button onClick={() => scrollToSection('projects')} className="item">
+              [PROJECTS]
+            </button>
             <button onClick={() => scrollToSection('books')} className="item">
               [BOOKS]
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="item">
-              [CONTACT]
             </button>
           </div>
 
@@ -53,19 +53,22 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-400">
             <div className="flex flex-col gap-4">
-              <button onClick={() => scrollToSection('skills')} className="text-gray-700 hover:text-gray-900 text-left transition-colors">
-                Skills
+              <button onClick={() => scrollToSection('about')} className="mobile-item">
+                [ABOUT]
               </button>
-              <button onClick={() => scrollToSection('projects')} className="text-gray-700 hover:text-gray-900 text-left transition-colors">
-                Projects
+              <button onClick={() => scrollToSection('skills')} className="mobile-item">
+                [SKILLS]
               </button>
-              <button onClick={() => scrollToSection('books')} className="text-gray-700 hover:text-gray-900 text-left transition-colors">
-                Books
+              <button onClick={() => scrollToSection('experience')} className="mobile-item">
+                [EXPERIENCE]
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-gray-900 text-left transition-colors">
-                Contact
+              <button onClick={() => scrollToSection('projects')} className="mobile-item">
+                [PROJECTS]
+              </button>
+              <button onClick={() => scrollToSection('books')} className="mobile-item">
+                [BOOKS]
               </button>
             </div>
           </div>

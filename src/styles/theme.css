@@ -378,7 +378,7 @@
         content: "";
         position: absolute;
         inset: 0;
-
+        overflow: hidden;
         width: 10px;
         height: 2px;
 
@@ -396,13 +396,13 @@
             600px 250px,
             1000px 310px,
             1500px 300px,
-            3500px 200px,
-            4500px 1030px,
-            4200px 480px,
-            4800px 590px,
-            3200px 1190px,
-            7200px 670px,
-            5300px 1310px;
+            1800px 200px,
+            300px 1030px,
+            200px 480px,
+            480px 590px,
+            320px 1190px,
+            720px 670px,
+            530px 1310px;
 
             animation: pixelDrift 60s linear infinite;
     }
@@ -429,13 +429,13 @@
             600px 250px,
             1000px 310px,
             1500px 300px,
-            3500px 200px,
-            4500px 1030px,
-            4200px 480px,
-            4800px 590px,
-            3200px 1190px,
-            7200px 670px,
-            5300px 1310px;
+            350px 200px,
+            450px 1030px,
+            420px 480px,
+            480px 590px,
+            320px 1190px,
+            720px 670px,
+            530px 1310px;
 
             animation: pixelDrift 60s linear infinite;
     }

@@ -22,7 +22,7 @@ export function Skills() {
                     <div className="space-y-8 flex flex-row gap-10">
 
                         {/* Languages */}
-                        <div className="flex flex-col items-start gap-4 w-fit">
+                        <div className="flex flex-col items-start gap-4 w-full lg:w-fit">
                             <h3 className="gliding-text">Programming Languages</h3>
                             <div className="flex flex-col gap-3">
                                 <span className="skill">Python</span>
@@ -38,7 +38,7 @@ export function Skills() {
                         </div>
 
                         {/* Frameworks / Tools */}
-                        <div className="flex flex-col items-start gap-4 w-fit">
+                        <div className="flex flex-col items-start gap-4 w-full lg:w-fit">
                             <h3 className="gliding-text">Frameworks & Tools</h3>
                             <div className="flex flex-col gap-5">
                                 <span className="skill">React</span>

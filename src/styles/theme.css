@@ -148,7 +148,7 @@ html, body {
         opacity: 0;
         width: 100%;
         color: #3a3a3a;
-        
+        line-height: 40px;
         display: block;
         transition: 0.3s; /* replace $speed */
         position: absolute;
@@ -317,6 +317,10 @@ html, body {
     .btn-flip:before,
     .btn-flip:after {
         padding: 50px 100px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .projects h1 {
         @apply text-[8rem];

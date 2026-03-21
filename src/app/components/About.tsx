@@ -126,7 +126,7 @@ export function About() {
                     drag={isMobile ? "x" : false}
                     dragConstraints={{ left: -50, right: 50 }}
                     dragElastic={isMobile ? 0.2 : 0}
-                    onDragEnd={(e, { offset, velocity }) => {
+                    onDragEnd={(_e, { offset, velocity }) => {
                       if (!isMobile) return;
 
                       const swipe = offset.x + velocity.x * 100;

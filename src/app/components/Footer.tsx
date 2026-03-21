@@ -4,7 +4,7 @@ export function Footer() {
       <div className="px-4 flex flex-col lg:flex-row justify-between items-center gap-4">
 
         {/* Left */}
-        <p className="text-3xl lg:text-sm opacity-60">
+        <p className="font-pixel text-3xl lg:text-sm opacity-60">
           © 2026 Kyra
         </p>
 

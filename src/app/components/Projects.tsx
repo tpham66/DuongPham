@@ -58,14 +58,14 @@ export function Projects() {
                 }}
             >
                 <div className="cross-layer"></div>
-                <div className="grid md:grid-rows-[1fr_4fr] items-center min-h-dvh">
+                <div className="grid grid-rows-[1fr_4fr] items-center min-h-screen">
                     <div className="items-center">
                         <h1 className="justify-start">
                             Projects
                         </h1>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2  gap-y-20 w-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-2  gap-y-20 w-full">
 
                         {projects.map((project) => (
                             <div
@@ -90,7 +90,7 @@ export function Projects() {
                                     </div>
 
                                     <div className="mt-auto">
-                                        <Button3D btn="View" link={project.link} />
+                                        <Button3D className="btn-flip text-5xl lg:text-lg tracking-widest" btn="View" link={project.link} />
                                     </div>
                                 </div>
 

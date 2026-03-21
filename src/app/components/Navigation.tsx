@@ -24,7 +24,7 @@ export function Navigation() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             <button onClick={() => scrollToSection('about')} className="item">
               [ABOUT]
             </button>
@@ -45,15 +45,15 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-gray-900"
+            className="lg:hidden p-2 text-gray-700 hover:text-gray-900"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={70} /> : <Menu size={70} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-400">
+          <div className="lg:hidden py-4 border-t border-gray-400">
             <div className="flex flex-col gap-4">
               <button onClick={() => scrollToSection('about')} className="mobile-item">
                 [ABOUT]

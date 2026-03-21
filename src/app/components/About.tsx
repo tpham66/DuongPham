@@ -1,10 +1,10 @@
 import { motion, AnimatePresence　} from "framer-motion";
-import { ChevronsRight, ChevronsLeft, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronsRight, ChevronsLeft, Github, Linkedin, Mail, Download } from "lucide-react";
 import myPhoto from "../assets/my_photo.jpg";
 import { useState　} from "react";
 import myResume from "@/app/assets/resume.pdf";
 
-
+const isMobile = window.innerWidth < 1024;
 
 const info = [
   {
@@ -84,7 +84,7 @@ export function About() {
     <div className="about page dark">
       <motion.section
         id="about"
-        className="py-20 bg-pixel-space"
+        className="py-40 px-20 lg:px-0 lg:py-20 bg-pixel-space"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
@@ -93,23 +93,23 @@ export function About() {
           velocity: 100,
         }}
       >
-        <div className="cross-layer pointer-events-none"></div>
-        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-center">
+        <div className="cross-layer"></div>
+        <div className="grid lg:grid-cols-[3fr_2fr] gap-20 lg:gap-12 items-center">
 
           {/* Left Column - Info Cards */}
-          <div className="flex gap-6 items-center w-full min-h-dvh">
+          <div className="flex gap-6 items-center w-full">
 
             {/* LEFT ARROW */}
             <button
               onClick={() => paginate(-1)}
               disabled={currentIndex === 0}
-              className="arrow-button"
+              className="hidden lg:block arrow-button"
             >
               <ChevronsLeft size={96} strokeWidth={1}/>
             </button>
 
             {/* CARD */}
-            <div className="card">
+            <div className="card overflow-hidden">
                 <AnimatePresence initial={false} custom={direction} mode="wait">
                   <motion.div
                     key={currentIndex}
@@ -123,7 +123,20 @@ export function About() {
                       stiffness: 220,
                       damping: 25
                     }}
-                    className="flex-1 flex flex-col justify-center items-center text-center"
+                    drag={isMobile ? "x" : false}
+                    dragConstraints={{ left: -50, right: 50 }}
+                    dragElastic={isMobile ? 0.2 : 0}
+                    onDragEnd={(e, { offset, velocity }) => {
+                      if (!isMobile) return;
+
+                      const swipe = offset.x + velocity.x * 100;
+
+                      if (swipe < -100) paginate(1);
+                      else if (swipe > 100) paginate(-1);
+                    }}
+                    whileDrag={{scale: 0.95}}
+                    dragDirectionLock
+                    className="w-full flex-1 flex flex-col justify-center items-center text-center"
                   >
                     {currentCard.image ? (
                       <div className="aspect-video overflow-hidden rounded-xl w-full">
@@ -175,7 +188,7 @@ export function About() {
             <button
               onClick={() => paginate(1)}
               disabled={currentIndex === info.length - 1}
-              className="arrow-button"
+              className="hidden lg:block arrow-button"
             >
               <ChevronsRight size={96} strokeWidth={1}/>
             </button>
@@ -183,33 +196,34 @@ export function About() {
           </div>
   
           { /* Right Column - Title */ }
-          <div className="flex flex-col justify-center items-center md:justify-end space-y-20">
+          <div className="flex flex-col -order-1 lg:order-1 items-center md:justify-end space-y-40 lg:space-y-20">
             <h1>
               ABOUT
             </h1>
             <motion.div 
-              className="flex justify-center gap-6 mb-8"
+              className="flex justify-center gap-15 mb-10 lg:gap-6 lg:mb-8"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.3, duration: 0.6 }}
             >
-              <a href="https://github.com/tpham66" target="_blank" rel="noopener noreferrer" className="hover:text-[#e94560] transition-colors border-2 border-white p-3 hover:border-[#e94560]">
-                <Github size={20} />
+              <a href="https://github.com/tpham66" target="_blank" rel="noopener noreferrer" className="contact">
+                <Github className="max-lg:w-15 max-lg:h-15"/>
               </a>
-              <a href="https://www.linkedin.com/in/thuy-duong-pham-/" target="_blank" rel="noopener noreferrer" className=" hover:text-[#e94560] transition-colors border-2 border-white p-3 hover:border-[#e94560]">
-                <Linkedin size={20} />
+              <a href="https://www.linkedin.com/in/thuy-duong-pham-/" target="_blank" rel="noopener noreferrer" className="contact">
+                <Linkedin className="max-lg:w-15 max-lg:h-15"/>
               </a>
-              <a href="mailto:phamduong2604@gmail.com" className="hover:text-[#e94560] transition-colors border-2 border-white p-3 hover:border-[#e94560]">
-                <Mail size={20} />
+              <a href="mailto:phamduong2604@gmail.com" className="contact">
+                <Mail className="max-lg:w-15 max-lg:h-15"/>
               </a>
             </motion.div>
 
             <a
               href={myResume}
-              download="Kyra-CV.pdf"
-              className="inline-flex items-center justify-center border-2 border-[#e94560] px-6 py-3 text-sm tracking-[0.2em] hover:bg-white hover:text-black hover:border-black hover:shadow-[10px_10px_0px_#e94560]  transition-colors w-fit"
+              download="Kyra_Resume.pdf"
+              className="inline-flex items-center justify-center gap-3 border-6 lg:border-2 border-[#e94560] px-15 py-10 lg:px-6 lg:py-3 text-4xl lg:text-sm tracking-[0.2em] hover:bg-white hover:text-black hover:border-black hover:shadow-[10px_10px_0px_#e94560] transition-colors w-fit"
             >
-              My Resume
+              <Download className="w-10 h-10 lg:w-5 lg:h-5" />
+              Resume
             </a>
           </div>
 

@@ -48,7 +48,7 @@ export function Projects() {
         <div className="projects page dark">
             <motion.section
                 id="projects"
-                className="py-20 px-10 bg-pixel-space"
+                className="py-20 bg-pixel-space"
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{once: false, amount: 0.3}}
@@ -74,7 +74,7 @@ export function Projects() {
                             >
                                 {/* CONTENT */}
                                 <div className="card_content">
-                                    <div className="w-full flex flex-col gap-5 border-2 border-white/0 bg-white/15 rounded-lg px-15 lg:px-10 py-10 hover:border-amber-200 hover:border-2">
+                                    <div className="w-full max-w-full flex flex-col gap-5 border-2 border-white/0 bg-white/15 rounded-lg px-6 lg:px-10 py-10 hover:border-amber-200 hover:border-2">
                                         <h3>{project.title}</h3>
 
                                         <div className="flex flex-col gap-0.1">
@@ -90,7 +90,7 @@ export function Projects() {
                                     </div>
 
                                     <div className="mt-auto">
-                                        <Button3D className="btn-flip text-5xl lg:text-lg tracking-widest" btn="View" link={project.link} />
+                                        <Button3D className="btn-flip text-4xl lg:text-lg tracking-widest" btn="View" link={project.link} />
                                     </div>
                                 </div>
 

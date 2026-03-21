@@ -12,10 +12,20 @@
     --color-background: var(--background);
 }
 
+html, body {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  background: black;
+}
+
 @layer components {
     /* Theme for all pages */
+    section {
+        position: relative;
+        z-index: 1;
+    }
     .page {
-        @apply font-pixel max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        @apply w-full font-pixel max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
     }
 
     h1 {
@@ -35,7 +45,7 @@
     }
 
     .gliding-text {
-        @apply transition-all duration-500 ease-out hover:translate-x-15
+        @apply transition-all duration-500 ease-out hover:translate-x-15 overflow-hidden
     }
 
     /* Dark pages */
@@ -273,10 +283,10 @@
 
     /* About */
     .about .card {
-        @apply w-full h-[50vh] flex flex-col rounded-4xl p-20 backdrop-blur-xl border-4 border-white shadow-white shadow-[40px_40px_0px]
+        @apply w-full h-[50vh] flex flex-col rounded-4xl p-20 backdrop-blur-xl border-4 border-white shadow-none;
     }
     .about .card:hover {
-        @apply border-4 border-[#e94560] shadow-[#e94560] shadow-[50px_50px_0px]
+        @apply border-4 border-[#e94560] shadow-none;
     }
     .about .contact {
         @apply border-6 border-white w-32 h-32 items-center scroll-px-10
@@ -301,7 +311,7 @@
 
     /* Projects */
     .btn-flip {
-        box-shadow: 50px 50px 0px #e94560;
+        box-shadow: 30px 30px 0px #e94560;
         border: 8px solid white;
     }
     .btn-flip:before,
@@ -309,7 +319,7 @@
         padding: 50px 100px;
     }
     .projects h1 {
-        @apply text-[9rem];
+        @apply text-[8rem];
     }
 
     .projects h3 {
@@ -327,7 +337,7 @@
 @layer utilities {
     .bg-pixel-space {
         position: relative;
-        overflow: visible;
+        overflow: hidden;
     }
 
     .dark .bg-pixel-space {
@@ -348,29 +358,27 @@
         height: 2px;
 
         box-shadow:
-            120px 80px,
-            300px 200px,
-            500px 150px,
-            700px 300px,
-            900px 100px,
-            1100px 250px,
-            200px 400px,
-            120px 180px,
-            100px 200px,
-            1800px 150px,
-            700px 1000px,
-            950px 200px,
-            1000px 310px,
-            1500px 300px,
-            3500px 200px,
-            4500px 1030px,
-            4200px 480px,
-            4800px 590px,
-            3200px 1190px,
-            7200px 670px,
-            5300px 1310px;
+            5vw 10vh,
+            15vw 30vh,
+            25vw 20vh,
+            35vw 50vh,
+            45vw 15vh,
+            55vw 40vh,
+            65vw 25vh,
+            75vw 60vh,
+            85vw 35vh,
+            95vw 20vh,
 
-            animation: pixelDrift 120s linear infinite;
+            10vw 70vh,
+            20vw 80vh,
+            30vw 75vh,
+            40vw 90vh,
+            60vw 85vh,
+            70vw 95vh,
+            80vw 88vh,
+            90vw 92vh;
+
+        animation: pixelDrift 120s linear infinite;
     }
 
     /* HORIZONTAL LINES */
@@ -378,33 +386,25 @@
         content: "";
         position: absolute;
         inset: 0;
-        overflow: hidden;
+
         width: 10px;
         height: 2px;
 
-        transform: translate(-50%, -50%);
+        transform: none;
 
         box-shadow:
-            200px 150px,
-            600px 250px,
-            1000px 300px,
-            400px 500px,
-            800px 650px,
-            100px 100px,
-            200px 300px,
-            400px 150px,
-            600px 250px,
-            1000px 310px,
-            1500px 300px,
-            1800px 200px,
-            300px 1030px,
-            200px 480px,
-            480px 590px,
-            320px 1190px,
-            720px 670px,
-            530px 1310px;
+            10vw 20vh,
+            30vw 40vh,
+            50vw 30vh,
+            70vw 60vh,
+            90vw 50vh,
 
-            animation: pixelDrift 60s linear infinite;
+            20vw 80vh,
+            40vw 70vh,
+            60vw 90vh,
+            80vw 85vh;
+
+        animation: pixelDrift 60s linear infinite;
     }
 
     /* VERTICAL LINES */
@@ -415,29 +415,21 @@
         width: 2px;
         height: 10px;
 
-        transform: translate(-50%, -50%);
+        transform: none;
 
         box-shadow:
-            200px 150px,
-            600px 250px,
-            1000px 300px,
-            400px 500px,
-            800px 650px,
-            100px 100px,
-            200px 300px,
-            400px 150px,
-            600px 250px,
-            1000px 310px,
-            1500px 300px,
-            350px 200px,
-            450px 1030px,
-            420px 480px,
-            480px 590px,
-            320px 1190px,
-            720px 670px,
-            530px 1310px;
+            10vw 20vh,
+            30vw 40vh,
+            50vw 30vh,
+            70vw 60vh,
+            90vw 50vh,
 
-            animation: pixelDrift 60s linear infinite;
+            20vw 80vh,
+            40vw 70vh,
+            60vw 90vh,
+            80vw 85vh;
+
+        animation: pixelDrift 60s linear infinite;
     }
 
     @keyframes pixelDrift {

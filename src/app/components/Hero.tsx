@@ -6,7 +6,7 @@ export function Hero() {
         <div className="hero page dark">
             <motion.section
                 id="hero"
-                className="py-20 px-10 bg-pixel-space min-h-dvh"
+                className="py-20 bg-pixel-space min-h-dvh"
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{once: false, amount: 0.3}}

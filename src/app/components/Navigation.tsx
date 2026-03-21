@@ -45,7 +45,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-gray-900"
+            className="lg:hidden p-2 text-gray-400 hover:text-[#e04560]"
           >
             {isOpen ? <X size={70} /> : <Menu size={70} />}
           </button>

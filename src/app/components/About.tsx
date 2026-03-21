@@ -12,7 +12,7 @@ const info = [
     title: "I AM_",
     description:
       `
-      Phạm Thuỳ Dương/ Duong Thuy Pham
+      Duong Thuy Pham
       Preferred: Kyra
       She/Her
       `

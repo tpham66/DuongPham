@@ -6,6 +6,7 @@
 @theme {
     --font-pixel: "Silkscreen", sans-serif;
     --font-hero: "Meta", sans-serif;
+    --font-basic: "Montserrat", sans-serif;
 }
 
 @theme inline {
@@ -23,6 +24,7 @@ html, body {
     section {
         position: relative;
         z-index: 1;
+        margin-top: -1px;
     }
     .page {
         @apply w-full font-pixel max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
@@ -41,7 +43,7 @@ html, body {
     }
 
     p {
-        @apply text-base leading-loose opacity-60 whitespace-pre-line max-w-prose;
+        @apply font-basic tracking-widest text-base leading-loose opacity-60 whitespace-pre-line max-w-prose;
     }
 
     .gliding-text {
@@ -90,6 +92,10 @@ html, body {
     .hero h1:hover {
         font-variation-settings: "wght" 100, "ital" 0;
         text-shadow: none;
+    }
+
+    .hero h2 {
+        @apply font-basic tracking-widest;
     }
 
     /* Theme for about section */
@@ -183,7 +189,7 @@ html, body {
 
     /* Theme for skills section */
     .skill {
-        @apply px-3 py-1 text-sm bg-white text-black transition w-[150px] rounded-lg;
+        @apply font-basic w-fit px-3 py-1 text-sm bg-white text-black transition rounded-lg;
     }
 
     .skill:hover {

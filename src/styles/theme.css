@@ -98,6 +98,11 @@
         @apply hover:text-[#e94560] transition-colors border-2 border-white p-3 hover:border-[#e94560] flex items-center justify-center
     }
 
+    /* Theme for experience section */
+    .experience h1 {
+        @apply break-all w-min text-left justify-end;
+    }
+
     /* Theme for projects section */
     .btn-flip {
         padding: 0;
@@ -243,19 +248,23 @@
     }
 
     h1 {
-        font-size: 12rem;
+        @apply text-[12rem] justify-center;
     }
 
     h2 {
-        @apply text-7xl
+        @apply text-5xl;
     }
 
     h3 {
-        @apply text-5
+        @apply text-4xl;
+    }
+
+    h4 {
+        @apply text-3xl;
     }
 
     p {
-        @apply text-4xl
+        @apply text-4xl;
     }
 
     .hero h1 {
@@ -273,7 +282,22 @@
         @apply border-6 border-white w-32 h-32 items-center scroll-px-10
     }
 
+    /* Skills */
+    .skills h3 {
+        @apply text-5xl;
+    }
+    .skill {
+        @apply text-2xl;
+    }
 
+    /* Experience */
+    .experience h1 {
+        @apply flex text-9xl text-center w-max justify-center;
+    }
+
+    .experience p {
+        @apply text-2xl;
+    }
 
     /* Projects */
     .btn-flip {
@@ -283,6 +307,13 @@
     .btn-flip:before,
     .btn-flip:after {
         padding: 50px 100px;
+    }
+    .projects h1 {
+        @apply text-[9rem];
+    }
+
+    .projects h3 {
+        @apply text-6xl;
     }
 
     /* Books */

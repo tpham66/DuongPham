@@ -28,7 +28,7 @@ export function Experience() {
     <div className="page experience light">
       <motion.section
         id="experience"
-        className="py-20 bg-pixel-space"
+        className="px-10 py-20 bg-pixel-space"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{once: false, amount: 0.2}}
@@ -38,7 +38,7 @@ export function Experience() {
         }}
       >
         <div className="cross-layer"></div>
-          <div className="space-y-8 grid md:grid-cols-[4fr_2fr] gap-50 items-center">
+          <div className="space-y-8 grid grid-cols-1 lg:grid-cols-[4fr_1fr] gap-50 items-center">
             {/* vertical line */}
             <div className="max-w-5xl mx-auto flex flex-col gap-20">
 
@@ -58,7 +58,7 @@ export function Experience() {
                   <div className="absolute left-1/2 top-6 w-4 h-4 bg-black shadow-[8px_8px_0px_#e04560] rounded-full -translate-x-1/2" />
 
                   {/* card */}
-                  <div className="w-[45%] bg-white text-black p-6 rounded-xl border-2 border-black shadow-[10px_10px_0px_#e94560]">
+                  <div className="w-[45%] lg:w-[45%] bg-white text-black p-6 rounded-xl border-2 border-black shadow-[10px_10px_0px_#e94560]">
                     <h3 className="text-xl font-bold">{item.year}</h3>
                     <h4 className="text-lg mt-2">{item.title}</h4>
                     <p className="text-sm mt-2 text-gray-700">{item.desc}</p>
@@ -67,7 +67,7 @@ export function Experience() {
                 </motion.div>
               ))}
             </div>
-            <h1 className="break-all w-min text-left justify-end">Experience</h1>
+            <h1 className="-order-1 lg:order-1">Experience</h1>
           </div>
       </motion.section>
     </div>

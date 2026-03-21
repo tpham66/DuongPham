@@ -1,10 +1,10 @@
 export function Footer() {
   return (
     <footer className="w-full dark page py-10">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="px-4 flex flex-col lg:flex-row justify-between items-center gap-4">
 
         {/* Left */}
-        <p className="text-sm opacity-60">
+        <p className="text-3xl lg:text-sm opacity-60">
           © 2026 Kyra
         </p>
 
@@ -13,7 +13,7 @@ export function Footer() {
           <a
             href="https://github.com/tpham66"
             target="_blank"
-            className="hover:text-[#e94560]"
+            className="hover:text-[#e94560] text-3xl lg:text-sm"
           >
             GitHub
           </a>
@@ -21,14 +21,14 @@ export function Footer() {
           <a
             href="https://linkedin.com"
             target="_blank"
-            className="hover:text-[#e94560]"
+            className="hover:text-[#e94560] text-3xl lg:text-sm"
           >
             LinkedIn
           </a>
 
           <a
             href="mailto:phamduong2604@gmail.com"
-            className="hover:text-[#e94560]"
+            className="hover:text-[#e94560] text-3xl lg:text-sm"
           >
             Email
           </a>

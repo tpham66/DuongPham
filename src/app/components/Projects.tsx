@@ -22,7 +22,7 @@ const projects = [
 },
 {
     title: "furmate",
-    description: "Pet tracking mobile app",
+    description: "Pet daily routines management mobile app",
     img: furmate,
     tag: ["Dart", "Firebase"],
     link: "https://github.com/tpham66/furmate",
@@ -58,14 +58,14 @@ export function Projects() {
                 }}
             >
                 <div className="cross-layer"></div>
-                <div className="grid grid-rows-[1fr_4fr] items-center min-h-screen">
+                <div className="grid lg:grid-rows-[1fr_4fr] gap-20 lg:gap-12 items-center">
                     <div className="items-center">
                         <h1 className="justify-start">
                             Projects
                         </h1>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2  gap-y-20 w-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-2  gap-y-20">
 
                         {projects.map((project) => (
                             <div
@@ -74,14 +74,14 @@ export function Projects() {
                             >
                                 {/* CONTENT */}
                                 <div className="card_content">
-                                    <div className="w-full flex flex-col gap-5 border-2 border-white/0 bg-white/15 rounded-lg px-10 py-10 hover:border-amber-200 hover:border-2">
-                                        <h3 className="text-2xl">{project.title}</h3>
+                                    <div className="w-full flex flex-col gap-5 border-2 border-white/0 bg-white/15 rounded-lg px-15 lg:px-10 py-10 hover:border-amber-200 hover:border-2">
+                                        <h3>{project.title}</h3>
 
                                         <div className="flex flex-col gap-0.1">
                                             <p>{project.description}</p>
                                             <div className="flex gap-2 mt-5 flex-wrap">
                                                 {project.tag?.map((t) => (
-                                                <span key={t} className="px-2 py-1 text-xs bg-white/70 text-black rounded">
+                                                <span key={t} className="px-2 py-1 text-xl lg:text-xs bg-white/70 text-black rounded">
                                                     {t}
                                                 </span>
                                                 ))}

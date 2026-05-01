@@ -48,6 +48,8 @@ export function Skills() {
                                 <span className="skill">Flutter</span>
                                 <span className="skill">TailwindCSS</span>
                                 <span className="skill">FastAPI</span>
+                                <span className="skill">MediaPipe</span>
+                                <span className="skill">scikit-learn</span>
                                 <span className="skill">OpenCV</span>
                                 <span className="skill">WorkOS</span>
                                 <span className="skill">Postman</span>

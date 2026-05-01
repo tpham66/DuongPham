@@ -8,9 +8,9 @@ const projects = [
         link: "https://github.com/tpham66/DuongPham",
     },
     {
-        title: "American Sign Language Translator",
+        title: "Live ASL Translator",
         description: "A real-time webcam-based ASL translator",
-        tag: ["Python", "FastAPI", "React", "TypeScript", "OpenCV", "MediaPipe", "scikit-learn", "machine learning"],
+        tag: ["Python", "React", "OpenCV", "MediaPipe", "scikit-learn"],
         link: "https://github.com/phungvg/Sign-Language-Translator",
     },
     {

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence　} from "framer-motion";
 import { ChevronsRight, ChevronsLeft, Github, Linkedin, Mail, Download } from "lucide-react";
-import myPhoto from "@/app/assets/my_photo.jpg";
+import myPhoto from "@/app/assets/my_photo.JPG";
 import { useState　} from "react";
 import myResume from "@/app/assets/resume.pdf";
 

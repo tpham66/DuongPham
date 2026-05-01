@@ -1,46 +1,48 @@
 import { motion } from "framer-motion";
 import { Button3D } from "./ui/button3d";
-import furmate from "@/app/assets/furmate.png";
-import pandapal from "@/app/assets/pandapal.png";
-import blackjack from "@/app/assets/blackjack.png";
-import civic from "@/app/assets/civicconnect.jpg";
-
 const projects = [
-{
-    title: "CivicConnect",
-    description: "Civic data dashboard for voters",
-    img: civic,
-    tag: ["Python", "React", "Django"],
-    link: "https://github.com/ShimraHazmi/CS351Group7",
-},
-{
-    title: "Pandapal",
-    description: "Won first-prize in SparkHack24",
-    img: pandapal,
-    tag: ["Figma"],
-    link: "https://www.figma.com/design/Q0VVedWL0Ft8eXVTxZVWBu/SparkHack?m=auto&t=DOttpLx1IGumqrGm-6",
-},
-{
-    title: "furmate",
-    description: "Pet daily routines management mobile app",
-    img: furmate,
-    tag: ["Dart", "Firebase"],
-    link: "https://github.com/tpham66/furmate",
-},
-{
-    title: "Student Task Manager",
-    description: "Student Task Manager mobile app",
-    img: furmate,
-    tag: ["Dart", "Firebase"],
-    link: "https://github.com/acm-uic/student-task-manager-sig-mobile-dev",
-},
-{
-    title: "Blackjack",
-    description: "A basic Blackjack game",
-    img: blackjack,
-    tag: ["Java"],
-    link: "https://github.com/tpham66/Blackjack-game",
-},
+    {
+        title: "Personal Portfolio",
+        description: "My personal portfolio website",
+        tag: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+        link: "https://github.com/tpham66/DuongPham",
+    },
+    {
+        title: "American Sign Language Translator",
+        description: "A real-time webcam-based ASL translator",
+        tag: ["Python", "FastAPI", "React", "TypeScript", "OpenCV", "MediaPipe", "scikit-learn", "machine learning"],
+        link: "https://github.com/phungvg/Sign-Language-Translator",
+    },
+    {
+        title: "furmate",
+        description: "Pet daily routines management mobile app",
+        tag: ["Dart", "Firebase"],
+        link: "https://github.com/tpham66/furmate",
+    },
+    {
+        title: "CivicConnect",
+        description: "Civic data dashboard for voters",
+        tag: ["Python", "React", "Django"],
+        link: "https://github.com/ShimraHazmi/CS351Group7",
+    },
+    {
+        title: "Pandapal",
+        description: "Won first-prize in SparkHack24",
+        tag: ["Figma"],
+        link: "https://www.figma.com/design/Q0VVedWL0Ft8eXVTxZVWBu/SparkHack?m=auto&t=DOttpLx1IGumqrGm-6",
+    },
+    {
+        title: "Student Task Manager",
+        description: "Student Task Manager mobile app",
+        tag: ["Dart", "Firebase"],
+        link: "https://github.com/acm-uic/student-task-manager-sig-mobile-dev",
+    },
+    {
+        title: "Blackjack",
+        description: "A basic Blackjack game",
+        tag: ["Java"],
+        link: "https://github.com/tpham66/Blackjack-game",
+    },
 ];
 
 export function Projects() {
